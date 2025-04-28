@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit Mahasiswa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto p-8">
+    <h1 class="text-3xl font-bold mb-6">Edit Mahasiswa</h1>
+    
+    <form action="/edit/<%= id %>" method="POST">
+      <div class="mb-4">
+        <label for="nama" class="block">Nama</label>
+        <input type="text" name="nama" value="<%= mahasiswa.nama %>" class="w-full p-2 border border-gray-300 rounded">
+      </div>
+      <div class="mb-4">
+        <label for="nim" class="block">NIM</label>
+        <input type="text" name="nim" value="<%= mahasiswa.nim %>" class="w-full p-2 border border-gray-300 rounded">
+      </div>
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Simpan</button>
+    </form>
+  </div>
+</body>
+</html>
